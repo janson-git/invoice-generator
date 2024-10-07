@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx
+    volumes:
+      - .:/app
+      - .docker/nginx:/etc/nginx/conf.d
+    links:
+      - app
+    ports:
+      - "44321:80"
+
+  app:
+    tty: true
+    build:
+      context: .docker/php
+    user: www-data
+    volumes:
+      - .:/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

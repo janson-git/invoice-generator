@@ -1,3 +1,7 @@
 up:
-	php -S 127.0.0.1:4321
-	@echo 'Open http://localhost:4321/ in your browser'
+	docker-compose up -d
+	@echo 'Open http://localhost:44321/ in your browser'
+down:
+	docker-compose down
+build:
+	docker-compose build
