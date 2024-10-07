@@ -16,7 +16,7 @@ make down
 
 ### Sample result of invoice generator
 
-![Sample of invoice](/docs/invoice_generator_invoice.png)
+![How Invoice Generator works](/docs/how-invoice-generator-work.gif)
 
 **NOTE:** Invoice Generator use  NumberFormatter from INTL php extension to format invoice's **Total sum** as text: 
 
